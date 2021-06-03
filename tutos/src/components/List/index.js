@@ -8,7 +8,6 @@ const List = () => {
 
   return (
     <div>
-      List
       <NewTask addNewTask={addNewTask} />
       {tasks.map((task, index) => (
         <div key={task + index}>
