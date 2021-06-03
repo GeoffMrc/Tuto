@@ -6,6 +6,7 @@ const NewTask = ({ addNewTask }) => {
   const addTask = () => {
     if (text) {
       addNewTask(text);
+      setText('');
     }
   };
 
