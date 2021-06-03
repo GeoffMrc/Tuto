@@ -1,0 +1,11 @@
+.list {
+  max-width: 300px;
+  margin: auto;
+  text-align: initial;
+  margin-top: 2rem;
+}
+
+.task {
+  margin: 10px 15px;
+  text-transform: capitalize;
+}

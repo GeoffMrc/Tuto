@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './style.css';
 import { NewTask } from './NewTask';
 
 const List = () => {
@@ -9,11 +10,13 @@ const List = () => {
   return (
     <div>
       <NewTask addNewTask={addNewTask} />
-      {tasks.map((task, index) => (
-        <div key={task + index}>
-          {task}
-        </div>
-      ))}
+      <div className="list">
+        {tasks.map((task, index) => (
+          <div className="task" key={task + index}>
+            {task}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
