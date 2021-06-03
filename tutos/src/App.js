@@ -1,11 +1,10 @@
 import './App.css';
+import { Title } from './components/Title';
 
-function App() {
-  return (
-    <div className="App">
-      Todolist prototype
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <Title name={'Arthur'} />
+  </div>
+);
 
 export default App;
