@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import './style.css';
 import { NewTask } from './NewTask';
+import { DeleteTask } from './DeleteTask';
 
 const List = () => {
   const [tasks, setTasks] = useState([]);
 
   const addNewTask = task => setTasks([...tasks, task]);
+  const deleteTask = taskToDelete => setTasks(tasks.filter(task => taskToDelete !== task));
 
   return (
     <div>
@@ -14,9 +16,7 @@ const List = () => {
         {tasks.map((task, index) => (
           <div className="task" key={task + index}>
             {task}
-            <div onClick={() => setTasks(tasks.filter(a => a !== task))}>
-              &times;
-            </div>
+            <DeleteTask onDelete={deleteTask} taskName={task} />
           </div>
         ))}
       </div>
