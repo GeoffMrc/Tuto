@@ -14,6 +14,9 @@ const List = () => {
         {tasks.map((task, index) => (
           <div className="task" key={task + index}>
             {task}
+            <div onClick={() => setTasks(tasks.filter(a => a !== task))}>
+              &times;
+            </div>
           </div>
         ))}
       </div>

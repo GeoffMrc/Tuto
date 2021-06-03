@@ -8,4 +8,7 @@
 .task {
   margin: 10px 15px;
   text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
