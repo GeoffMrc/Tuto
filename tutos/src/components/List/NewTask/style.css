@@ -1,0 +1,13 @@
+.text {
+  border: none;
+  border-bottom: solid 1px grey;
+  padding: 5px;
+  margin-right: 1rem;
+}
+
+.button {
+  background-color: white;
+  border: 1px solid grey;
+  padding: 8px 17px;
+  border-radius: 3px;
+}
