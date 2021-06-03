@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
 import { NewTask } from './NewTask';
 import { DeleteTask } from './DeleteTask';
 
 const List = () => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem('tasks')) || []);
 
   const addNewTask = task => setTasks([...tasks, task]);
   const deleteTask = taskToDelete => setTasks(tasks.filter(task => taskToDelete !== task));
+
+  const save = () => localStorage.setItem('tasks', JSON.stringify(tasks));
+
+  useEffect(save, [tasks]);
 
   return (
     <div>
