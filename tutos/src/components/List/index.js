@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './style.css';
 import { NewTask } from './NewTask';
 import { DeleteTask } from './DeleteTask';
+import DoneButton from './NewTask/DoneButton';
 
 const List = () => {
   const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem('tasks')) || []);
@@ -20,6 +21,7 @@ const List = () => {
         {tasks.map((task, index) => (
           <div className="task" key={task + index}>
             {task}
+            <DoneButton />
             <DeleteTask onDelete={deleteTask} taskName={task} />
           </div>
         ))}
